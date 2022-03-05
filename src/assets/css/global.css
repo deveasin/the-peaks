@@ -3,16 +3,16 @@
     margin: 0;
     padding: 0
 }
-:root {
+
+body {
     --primary_color: #09357B;
     --white: #ffffff;
     --font_size: 16px;
     --roboto: 'Roboto', sans-serif;
     --georgia-bold: 'Georgia Bold';
     --georgia-regular: 'Georgia Regular';
-    --color: var(--color)
-}
-body {
+    --color: var(--color);
+
     font-size: var(--font_size);
     line-height: 24px;
     font-family: var(--roboto);
