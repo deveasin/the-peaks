@@ -11,8 +11,6 @@ this.addEventListener("install", event => {
                 '/favicon.ico',
                 '/index.html',
                 'https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700&display=swap',
-                'https://fonts.gstatic.com/s/roboto/v29/KFOlCnqEu92Fr1MmEU9fBBc4.woff2',
-                'https://fonts.gstatic.com/s/roboto/v29/KFOmCnqEu92Fr1Mu4mxK.woff2',
                 '/'
             ])
         })
