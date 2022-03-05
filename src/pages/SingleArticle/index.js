@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { singlePageEndpoint } from '../../utils/api-endpoints';
+import apiEndpoints, { singlePageEndpoint } from '../../utils/api-endpoints';
 import useApi from '../../Hooks/useApi'
 import Bookmark from '../../components/BookmarkBtn';
 import BookmarkToast from '../../components/BookmarkToast';
@@ -15,7 +15,7 @@ const SingleAritcle = () => {
     const params = useParams();
     const pathname = params['*'];
 
-    const [result, loading] = useApi(singlePageEndpoint + '&ids=' + pathname);
+    const [result, loading] = useApi(apiEndpoints.single + '&ids=' + pathname);
 
 
     const handleBookmark = useCallback((e) => {

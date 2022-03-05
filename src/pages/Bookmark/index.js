@@ -3,7 +3,7 @@ import SortBookmarkSection from "../../layouts/SortBookmarkSection";
 import Articles from "../../layouts/Articles";
 import Spacer from "../../components/Spacer";
 import useApi from "../../Hooks/useApi";
-import { bookmarkEndpoint } from '../../utils/api-endpoints';
+import apiEndpoints from '../../utils/api-endpoints';
 import SortableSelect from '../../components/SortableSelect';
 import useObserver from '../../Hooks/useObserver';
 import Loader from '../../components/Loader';
@@ -18,7 +18,7 @@ const Bookmark = () => {
     });
     const params = new URLSearchParams(queryParams);
     
-    const [result, loading, hasMore, resetResult] = useApi(bookmarkEndpoint + '&' + params.toString());
+    const [result, loading, hasMore, resetResult] = useApi(apiEndpoints.bookmark + '&' + params.toString());
     const {loadData, lastElement} = useObserver(loading, hasMore);
 
     useEffect(() => {

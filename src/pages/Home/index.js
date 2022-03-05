@@ -4,7 +4,7 @@ import Articles from "../../layouts/Articles";
 import SectionHeader from "../../components/SectionHeader";
 import Spacer from "../../components/Spacer";
 import useApi from "../../Hooks/useApi";
-import { topNewsEndpoint, sportsEndpoint } from '../../utils/api-endpoints';
+import apiEndpoints from '../../utils/api-endpoints';
 import SortableSelect from '../../components/SortableSelect'
 import Loader from '../../components/Loader';
 import Card from '../../components/Card';
@@ -15,8 +15,8 @@ const Home = () => {
     });
     const params = (new URLSearchParams(queryParams)).toString();
 
-    const [topNewsResults, topNewsLoading, , resetResult] = useApi(topNewsEndpoint + '&' + params); // Api request for top news
-    const [sportResults, sportLoading, , sportsResetResult] = useApi(sportsEndpoint + '&' + params); // Api request for sports
+    const [topNewsResults, topNewsLoading, , resetResult] = useApi(apiEndpoints.topNews + '&' + params); // Api request for top news
+    const [sportResults, sportLoading, , sportsResetResult] = useApi(apiEndpoints.sports + '&' + params); // Api request for sports
 
 
     const handleOrderBy = useCallback((value) => {

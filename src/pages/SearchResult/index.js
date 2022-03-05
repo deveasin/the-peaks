@@ -3,7 +3,7 @@ import SortBookmarkSection from "../../layouts/SortBookmarkSection";
 import Articles from "../../layouts/Articles";
 import Spacer from "../../components/Spacer";
 import useApi from "../../Hooks/useApi";
-import { searchResultEndpoint } from '../../utils/api-endpoints';
+import apiEndpoints from '../../utils/api-endpoints';
 import SortableSelect from '../../components/SortableSelect'
 import { useParams } from "react-router-dom";
 import useObserver from '../../Hooks/useObserver';
@@ -16,7 +16,7 @@ const SearchResult = () => {
     });
     const params = new URLSearchParams(queryParams);
     const {query} = useParams();
-    const [result, loading, hasMore, resetResult] = useApi(searchResultEndpoint + '&' + params.toString());
+    const [result, loading, hasMore, resetResult] = useApi(apiEndpoints.search + '&' + params.toString());
     const {loadData, lastElement} = useObserver(loading, hasMore);
    
 
