@@ -2,7 +2,7 @@ import './index.scss';
 
 const NoResultFound = (props) => {
     return (
-        <div {...props}>
+        <div data-testid="no-result-found" {...props}>
             <p className="peaks-no-result-found" >Sorry, no results found :(</p>
         </div>
     )

@@ -10,7 +10,7 @@ const Card = ({content = {}, showTrailText = false, enbalePlaceholder = true, sh
     const containerClassess = [
         'peaks-card',
         'peaks-card-' + size
-    ]
+    ];
 
     return (
         <Link to={`/single/${id}`} className={containerClassess.join(' ')} data-testid="card">
@@ -22,7 +22,9 @@ const Card = ({content = {}, showTrailText = false, enbalePlaceholder = true, sh
             
             <div className={`peaks-card-content ${thumbnail || enbalePlaceholder? 'has-thumb' : 'no-thumb'}`}>
                 {webTitle && <h5 className="peaks-card-content-title">{webTitle}</h5>}
-                {(showTrailText && trailText) ? <p data-testid="trail-text" className="peaks-card-content-trail-text">{stripsHtmlTag(trailText)}</p> : ''}
+                {(showTrailText && trailText) ? <p data-testid="trail-text" className="peaks-card-content-trail-text">{
+                    stripsHtmlTag(trailText)
+                }</p> : ''}
             </div>
         </Link>
     )

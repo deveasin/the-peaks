@@ -4,7 +4,10 @@ import './index.scss'
 
 const Bookmark = ({title="View BOOKMARK", handleBookmark = () => ''}) => {
     return (
-        <Link onClick={handleBookmark} to="/bookmarks" className="peaks-bookmark"><img src={BookmarkIcon} alt="Bookmark Icon"/>{title}</Link>
+        <Link onClick={handleBookmark} to="/bookmarks" className="peaks-bookmark">
+            <img src={BookmarkIcon} alt="Bookmark Icon"/>
+            {title}
+        </Link>
     )
 }
 

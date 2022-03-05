@@ -8,7 +8,7 @@ const Loader = ({size = 'large'}) => {
     ];
 
     return (
-        <div className={containerClass.join(' ')}>
+        <div data-testid="loader" className={containerClass.join(' ')}>
             <div className="peaks-loader-ring"><div></div><div></div><div></div><div></div></div>
         </div>
     )

@@ -13,13 +13,13 @@ const BookmarkToast = ({title = "", type}) => {
             setShow(prev => !prev);
         }, 1000)
         
-    }, [type])
+    }, [type]);
 
     let containerClass = [
         'peaks-bookmark-toast',
         `peaks-bookmark-toast-type-${type ? "success" : 'danger'}`,
         `peaks-bookmark-toast-${show ? "show": 'hide'}`
-    ]
+    ];
 
     return (
         <div data-testid="bookmark-toast" className={containerClass.join(' ')}>
