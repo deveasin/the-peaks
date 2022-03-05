@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import apiEndpoints, { singlePageEndpoint } from '../../utils/api-endpoints';
+import apiEndpoints from '../../utils/api-endpoints';
 import useApi from '../../Hooks/useApi'
 import Bookmark from '../../components/BookmarkBtn';
 import BookmarkToast from '../../components/BookmarkToast';
