@@ -4,8 +4,9 @@ import './assets/css/global.css';
 import './assets/css/font-styles.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-// eslint-disable-next-line no-unused-vars
-import {serviceWorkerDev} from './serviceWorkerDev'
+import {serviceWorkerDev} from './serviceWorkerDev';
+import { GeneralConfig } from './utils/config';
+
 
 ReactDOM.render(
   <React.StrictMode>
@@ -15,7 +16,9 @@ ReactDOM.render(
 );
 
 window.addEventListener('load', () => {
-  // serviceWorkerDev();
+  if(GeneralConfig.pwa === true) {
+    serviceWorkerDev();
+  }
 })
 
 // If you want to start measuring performance in your app, pass a function
