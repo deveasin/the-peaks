@@ -1,3 +1,4 @@
+import { GeneralConfig } from "./config";
 class ApiEndpoints {
     // We are taking api key from constructor
     constructor(apiKey = "test"){
@@ -17,7 +18,7 @@ class ApiEndpoints {
         }
     }
 }
-let apiEndpoints = new ApiEndpoints();
+let apiEndpoints = new ApiEndpoints(GeneralConfig.apiKey);
 
 /**
  * All Api endpoint will be added here
