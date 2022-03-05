@@ -38,6 +38,8 @@ const SingleAritcle = () => {
     }, [pathname])
 
     useEffect(() => {
+        window.scroll(0, 0); // scroll to top, when we visit single page, scroll stick to bottom, that's why moving it to top
+
         var bookmarks = JSON.parse(localStorage.getItem("bookmarks")) || [],
             position = bookmarks.indexOf(pathname);
 
