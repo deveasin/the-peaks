@@ -77,7 +77,7 @@ const SingleAritcle = () => {
                             <Bookmark title={isBookmark === true ? "Remove Bookmark" : "ADD BOOKMARK" } type="bookmark" handleBookmark={handleBookmark}/>
 
                             <Link to="/category/sport" className="peaks-single-article-date">{formatedDate(webPublicationDate)}</Link>
-                            <Link to="/category/calture"><h1 className="peaks-single-article-title">{webTitle}</h1></Link>
+                            <Link to="/category/culture"><h1 className="peaks-single-article-title">{webTitle}</h1></Link>
                             {headline && <h2 className="peaks-single-article-headline">{headline}</h2>}
                             <hr className='peaks-single-article-separator' />
                         </div>

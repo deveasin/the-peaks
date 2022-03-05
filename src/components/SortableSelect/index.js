@@ -32,7 +32,8 @@ const SortableSelect = ({setOrderby, orderBy, option = []}) => {
         return null;
     }, [options, value])
 
-    const handleClick = useCallback((selectOptionValue) => {
+    const handleClick = useCallback((selectOptionValue, e) => {
+        if(value === selectOptionValue) { return; }
         setOrderby(selectOptionValue);
         setValue(selectOptionValue);
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -47,7 +48,7 @@ const SortableSelect = ({setOrderby, orderBy, option = []}) => {
 
             <ul className="peaks-select-list">
                 {options.map(option => (
-                    <li onClick={() => handleClick(option.value)} key={option.value} className={`peaks-select-list-item ${option.value === value ? 'ative' : ''}`} data-value={option.value}>{option.label}</li>
+                    <li onClick={(e) => handleClick(option.value, e)} key={option.value} className={`peaks-select-list-item ${option.value === value ? 'ative' : ''}`} data-value={option.value}>{option.label}</li>
                 ))}
             </ul>
         </div>
