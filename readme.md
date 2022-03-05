@@ -9,7 +9,7 @@ Demo Link: https://peaks.deveasin.com/
 5. npm start or yarn start
 ```
 # Some testing
-1. **Enable PWA service worker:** Plese go to the utils/config.js file. then add **pwa** value true. then It will active the service worker for PWA offline access
+1. **Enable PWA service worker:** Please go to the utils/config.js file. then add **pwa** value true. then It will active the service worker for PWA offline access
 
 2. **Unit Test** : `npm run test`
 
